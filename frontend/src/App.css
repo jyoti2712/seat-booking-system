@@ -1,0 +1,187 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    background: linear-gradient(135deg, #f2f4f7, #e0e7ff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  /* Navbar Modern Styling */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  nav button:nth-child(2) {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  nav button:nth-child(2):hover {
+    background-color: #0056b3;
+  }
+  
+  nav button:nth-child(3) {
+    background-color: #6c63ff;
+    color: white;
+  }
+  
+  nav button:nth-child(3):hover {
+    background-color: #5146ff;
+  }
+  
+  nav button:first-of-type {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  nav button:first-of-type:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Form Styles */
+  form, .auth-form {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    margin: 5rem auto;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  
+  form h2, .auth-form h2 {
+    font-size: 24px;
+    margin-bottom: 2rem;
+    color: #222;
+  }
+  
+  form input, .auth-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+  
+  form input:focus, .auth-form input:focus {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+    outline: none;
+  }
+  
+  form button, .auth-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  form button:hover, .auth-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .auth-form .error {
+    color: #e74c3c;
+    margin-top: 10px;
+  }
+  
+  /* Seat Grid */
+  .seat-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .seat-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+    justify-items: center;
+    margin-top: 1rem;
+  }
+  
+  .seat {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    font-weight: bold;
+    transition: background 0.2s;
+    cursor: pointer;
+  }
+  
+  .seat:hover {
+    background-color: #d0d0ff;
+  }
+  
+  .seat.selected {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .seat.booked {
+    background-color: #a9a9a9;
+    color: white;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .seat-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .auth-form, .seat-container {
+      padding: 2rem;
+    }
+  }
+  
